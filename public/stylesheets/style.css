@@ -25,7 +25,7 @@ a {
   align-items: center; }
   .container .text {
     text-align: center;
-    --animate-duration: 0.5s;
+    --animate-duration: 0.3s;
     padding: 10vw 10vh;
     font-size: 2em;
     border-radius: 30px; }

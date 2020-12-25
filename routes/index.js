@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     if(req.query.name.toLowerCase() === element.name.toLocaleLowerCase())
       d = element;
   })
-  res.render('index', { title: 'Rogelio', da: JSON.stringify(d)});
+  res.render('index', { title: d.name, da: JSON.stringify(d)});
   console.log(d);
 });
 

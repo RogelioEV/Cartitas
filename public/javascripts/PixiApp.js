@@ -60,12 +60,20 @@ console.log(datos);
 let n = 0;
 document.body.addEventListener("click",onClick)
 async function onClick (ev){
-  console.log(txt);
-  await fadeOut();
-  txt.innerText = datos.text[n];
-  n++;
-  await fadeIn();
-
+  console.log(datos.text);
+  if(n<datos.text.length){
+  	console.log(txt);
+  	await fadeOut();
+  	txt.innerText = datos.text[n];
+  	n++;
+  	await fadeIn();
+  }
+  else if(n == datos.text.length){
+    await fadeOut();
+    txt.innerText = "Con cariño,\n Rogelio Echavarría"
+    await fadeIn();
+  	n++;
+  }
 }
 function fadeOut(){
   return new Promise(resolve => {
@@ -73,7 +81,7 @@ function fadeOut(){
     txt.classList.add("animate__fadeOut")
     setTimeout(()=>{
       resolve()
-    }, 500)
+    }, 300)
   })
 }
 function fadeIn(){
@@ -82,6 +90,6 @@ function fadeIn(){
       txt.classList.remove("animate__fadeOut")
       txt.classList.add("animate__fadeIn")
       resolve()
-    }, 500)
+    }, 300)
   })
 }

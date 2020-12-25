@@ -12,6 +12,11 @@ body
   font-family: Nunito
   background-color: $darkBlue
   color: white
+  margin: 0
+  padding: 0
+  width: 100vw
+  height: 100vw
+  overflow: hidden
 a
   color: #00B7FF
 .title
@@ -20,7 +25,23 @@ a
   display: flex
   flex-direction: column
   justify-content: space-evenly
-  height: 80vh
+  min-height: 100vh
+  margin: 0
+  align-items: center
+  .text
+    text-align: center
+    --animate-duration: 0.5s
+    padding: 10vw 10vh
+    font-size: 2em
+    border-radius: 30px
+    @media screen and ( max-width: 1080px )
+      font-size:  1.5em
+      background-color: rgba(1,17,38,0.6)
+
+
 .main
-  display: flex
-  justify-content: center
+  position: absolute
+  x: 0 
+  y: 0
+  #app
+  z-index: -1

@@ -1,10 +1,9 @@
 extends layout
 
 block content
+  .main
+     #app
   .container
-    .title
-      h1 Hola 
-        i #{title}, 
-        d te hice un regalo
-    .main
-      #app
+    .text.animate__animated.animate__fadeIn#text(name = title)
+      .p Hola #{title}, ¡Feliz Navidad!
+      .p (haz tap para seguir avanzando)

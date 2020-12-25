@@ -6,7 +6,7 @@ class SnowParticles {
   constructor (app){
     this.app = app;
     this.scale = app.customScale;
-    this.amount = 700*this.scale;
+    this.amount = 500*this.scale;
     this.maxSize = 15 * this.scale;
     this.minSize = 10 * this.scale;
     this.maxSpeedX = 2;
